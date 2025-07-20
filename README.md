@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Tuition Teacher Clone</title>
+  <title>Get Your Wisdom</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -14,7 +14,7 @@
   <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold">YourLogo</a>
+      <a href="#" class="text-2xl font-bold">Get Your Wisdom</a>
       <nav>
         <ul class="flex space-x-6">
           <li><a href="#" class="hover:text-blue-600">Home</a></li>
