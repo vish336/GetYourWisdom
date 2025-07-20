@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Tuition Teacher Clone</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <style>
     html { scroll-behavior: smooth; }
   </style>
@@ -104,27 +104,29 @@
 
   <!-- Modal Script -->
   <script>
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalTitle = document.getElementById('modalTitle');
-    const extraField = document.getElementById('extraField');
-    const dynamicForm = document.getElementById('dynamicForm');
+    document.addEventListener("DOMContentLoaded", function () {
+      const modalOverlay = document.getElementById('modalOverlay');
+      const modalTitle = document.getElementById('modalTitle');
+      const extraField = document.getElementById('extraField');
+      const dynamicForm = document.getElementById('dynamicForm');
 
-    function openModal(type) {
-      modalOverlay.classList.remove('hidden');
-      if (type === 'student') {
-        modalTitle.innerText = 'Register as Student';
-        extraField.placeholder = 'Class / Subjects Needed';
-        dynamicForm.action = 'https://formspree.io/f/xrbleged';
-      } else {
-        modalTitle.innerText = 'Register as Tutor';
-        extraField.placeholder = 'Subjects You Teach';
-        dynamicForm.action = 'https://formspree.io/f/xgvzoekl';
+      window.openModal = function(type) {
+        modalOverlay.classList.remove('hidden');
+        if (type === 'student') {
+          modalTitle.innerText = 'Register as Student';
+          extraField.placeholder = 'Class / Subjects Needed';
+          dynamicForm.action = 'https://formspree.io/f/xrbleged';
+        } else {
+          modalTitle.innerText = 'Register as Tutor';
+          extraField.placeholder = 'Subjects You Teach';
+          dynamicForm.action = 'https://formspree.io/f/xgvzoekl';
+        }
       }
-    }
 
-    function closeModal() {
-      modalOverlay.classList.add('hidden');
-    }
+      window.closeModal = function() {
+        modalOverlay.classList.add('hidden');
+      }
+    });
   </script>
 </body>
 </html>
